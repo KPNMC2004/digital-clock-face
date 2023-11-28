@@ -1,0 +1,123 @@
+@font-face {
+    font-family: press-start;
+    src: url('../font_face/prstart.ttf') format('truetype');
+  }
+
+html {
+    background: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    font-size: 2rem;
+}
+
+/* analog clock */
+.analog-clock {
+    width: 30rem;
+    height: 30rem;
+
+    margin: 50px auto;
+    padding: 2rem;
+
+    outline: 20px solid white;
+    border: #2fbdc8 8px solid;
+    backdrop-filter: blur(5px);
+
+    background-color: rgba(35, 155, 161, 0.301);
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.052),
+                0 0 3px rgba(128, 128, 128, 0.445) inset,
+                0 0 10px black inset ,
+                0 0 10px rgba(0, 0, 0, 0.209);
+
+}
+
+.clock-face {
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+    
+    transform: translateY(-3px);
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    
+    position: absolute;
+    top:50%;
+
+    
+    border-radius: 2em;
+
+    background-color: rgb(202, 202, 202);
+
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all .05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.303);
+}
+
+.button {
+    width: 10%;
+    height: 10%;
+
+    position: relative;
+    top: 46%;
+    left: 46%;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.483);
+}
+
+.hour-hand {
+    width: 30%;
+    right: 50%;
+    
+    background-color: rgb(127, 127, 127);
+}
+
+.sec-hand {
+    background-color: #1b959e;
+}
+
+/* digital clock */
+.digital-clock {
+    justify-self: flex-end;
+
+    margin-bottom: auto;
+    padding: 1.5rem;
+
+    font-size: 3rem;
+    font-family: press-start;
+
+    background: #12575c6c;
+    border-radius: 4rem;
+
+    backdrop-filter: blur(4px);
+    color: rgb(190, 190, 190);
+
+}
+
+.time {
+    text-shadow: 4px 4px 8px #0a8d9940;
+}
